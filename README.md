@@ -69,3 +69,9 @@ A base inclui 97 formas marcadas com `is_mega` pela PokéAPI, distribuídas entr
 
 Megas são apresentadas como transformações temporárias, separadas das evoluções permanentes. A disponibilidade e ativação dependem do jogo. Reversão Primal e Gigantamax não são marcadas como Megas nesta implementação.
 
+
+## Dynamax e Gigantamax
+
+O seletor e a ficha incluem 34 formas Gigantamax de 32 espécies, com variantes de Urshifu e Toxtricity. As imagens normal/shiny usam os mesmos fallbacks das demais formas. A seção de Dynamax explica a mecânica de Sword/Shield sem criar uma forma visual ou calcular HP de batalha.
+
+Gigantamax fica separado das evoluções permanentes e das Megas. Os atributos são valores base, sem o bônus de HP de Dynamax; o peso é indicado como não informado. A base não inclui Eternamax nessa categoria.
