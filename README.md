@@ -6,7 +6,7 @@ Pokédex responsiva em português com 1.025 espécies, 18 tipos, busca por nome/
 
 A aba **Lendários** lista as 71 espécies com `is_legendary` na PokéAPI; míticos não são incluídos nessa classificação. Busca, filtros e ordenação também funcionam nessa aba.
 
-Cada ficha mostra a cadeia completa de evoluções da espécie, com estágios, ramificações, pré-evoluções e links para abrir as outras fichas. Espécies sem evolução recebem uma indicação explícita. Os dados são locais e incluem relações entre espécies; formas regionais e condições de evolução não são detalhadas.
+Cada ficha mostra a cadeia completa de evoluções da espécie, com estágios, ramificações, pré-evoluções e links para abrir as outras fichas. Espécies sem evolução recebem uma indicação explícita. Os dados são locais e incluem relações entre espécies, condições e variantes de método.
 
 ## Recursos adicionais
 
@@ -31,7 +31,7 @@ Abra index.html no navegador, ou use um servidor estático. Com Node instalado, 
 
 ## Dados e regras
 
-Base incluída em data.js, obtida dos CSVs públicos oficiais de https://github.com/PokeAPI/pokeapi em 29/10/2026. Contém todas as 1.025 espécies disponíveis nessa base, cada uma na forma padrão; formas alternativas, regionais e Mega Evoluções não são entradas separadas. As gerações seguem a espécie, incluindo Hisui na geração VIII.
+Base incluída em data.js, obtida dos CSVs públicos oficiais de https://github.com/PokeAPI/pokeapi em 29/10/2026. Contém todas as 1.025 espécies disponíveis nessa base, cada uma na forma padrão; formas regionais aparecem no seletor da ficha, enquanto outras formas alternativas e Mega Evoluções não são entradas separadas. As gerações seguem a espécie, incluindo Hisui na geração VIII.
 
 Os multiplicadores defensivos usam a tabela atual dos 18 tipos dos jogos principais e multiplicam as relações dos dois tipos. Não simulam habilidades, itens, clima, efeitos de golpes ou Terastalização. O tipo Stellar não é um tipo padrão de espécie e não entra nesse cálculo.
 
@@ -44,3 +44,9 @@ Favoritos ficam no localStorage deste navegador. Não há conta ou coleta de dad
 Dados: https://pokeapi.co/ e https://github.com/PokeAPI/pokeapi
 Imagens: https://github.com/PokeAPI/sprites
 Pokémon e seus personagens pertencem à Nintendo, Creatures Inc. e GAME FREAK. Projeto de fãs, sem afiliação oficial.
+
+## Formas, shiny e condições de evolução
+
+O seletor da ficha reúne 60 formas regionais de Alola, Galar, Hisui e Paldea, incluindo as três raças de Tauros. Tipos, multiplicadores defensivos, altura, peso e atributos mudam com a forma. A alternância shiny também funciona nas formas regionais. A imagem tenta usar artwork oficial e depois o sprite shiny correspondente; quando ambos faltam, informa a indisponibilidade.
+
+As condições em extras.js são obtidas de pokemon_evolution.csv e tabelas auxiliares da PokéAPI: nível, itens, troca, amizade, horário, golpes, localização, forma exigida e outros requisitos disponíveis. Mostra métodos principais e variantes, identificando a referência do jogo registrada na base. Essa referência não é uma lista completa de jogos compatíveis e as condições podem variar entre versões.
