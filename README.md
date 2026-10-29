@@ -50,3 +50,15 @@ Pokémon e seus personagens pertencem à Nintendo, Creatures Inc. e GAME FREAK. 
 O seletor da ficha reúne 60 formas regionais de Alola, Galar, Hisui e Paldea, incluindo as três raças de Tauros. Tipos, multiplicadores defensivos, altura, peso e atributos mudam com a forma. A alternância shiny também funciona nas formas regionais. A imagem tenta usar artwork oficial e depois o sprite shiny correspondente; quando ambos faltam, informa a indisponibilidade.
 
 As condições em extras.js são obtidas de pokemon_evolution.csv e tabelas auxiliares da PokéAPI: nível, itens, troca, amizade, horário, golpes, localização, forma exigida e outros requisitos disponíveis. Mostra métodos principais e variantes, identificando a referência do jogo registrada na base. Essa referência não é uma lista completa de jogos compatíveis e as condições podem variar entre versões.
+
+## PWA instalável e acesso offline
+
+O manifesto permite instalar o site no Android (Chrome), iPhone (Safari) e navegadores compatíveis no computador. Use o botão **Instalar app**: ele abre a instalação nativa quando disponível ou apresenta instruções por plataforma. O aplicativo abre em modo standalone e permanece hospedado no GitHub Pages.
+
+O primeiro acesso precisa de internet. Aguarde **Dados prontos para uso offline**. O service worker salva todos os arquivos e dados essenciais de uma mesma versão; busca, filtros, favoritos, evoluções, formas regionais e guia de tipos funcionam sem conexão depois disso. As imagens são salvas conforme carregadas, com limite de 120; imagens ainda não salvas mostram uma indicação quando offline. Fontes externas não são requisito para o modo offline. O navegador pode remover dados para liberar espaço.
+
+Uma nova versão é preparada separadamente. Quando estiver pronta, o aviso **Atualizar agora** permite ativá-la e recarregar a página. Favoritos e tema ficam no localStorage e são preservados.
+
+Depois de editar HTML, CSS, JavaScript, dados ou manifesto, execute `node scripts/build-pwa.cjs` antes de publicar. Isso atualiza as URLs de arquivos e a versão do service worker. Publique também o index.html e sw.js gerados. Para testar o modo offline, sirva por localhost ou HTTPS; a abertura direta como arquivo não permite service worker.
+
+Os ícones de instalação usam um monograma G desenhado para o projeto, sem personagens Pokémon. A instalação como PWA não altera os direitos sobre o conteúdo da franquia.
