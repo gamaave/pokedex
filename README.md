@@ -2,6 +2,12 @@
 
 Pokédex responsiva em português com 1.025 espécies, 18 tipos, busca por nome/número, filtros por geração e tipo, ordenação, favoritos locais e fichas com fraquezas, resistências, imunidades e atributos base.
 
+## Lendários e evoluções
+
+A aba **Lendários** lista as 71 espécies com `is_legendary` na PokéAPI; míticos não são incluídos nessa classificação. Busca, filtros e ordenação também funcionam nessa aba.
+
+Cada ficha mostra a cadeia completa de evoluções da espécie, com estágios, ramificações, pré-evoluções e links para abrir as outras fichas. Espécies sem evolução recebem uma indicação explícita. Os dados são locais e incluem relações entre espécies; formas regionais e condições de evolução não são detalhadas.
+
 ## Recursos adicionais
 
 A aba **Guia de tipos** mostra, para cada tipo, suas vantagens no ataque (2×), fraquezas na defesa (2×) e imunidades (0×). O filtro permite destacar um tipo.
