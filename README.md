@@ -79,3 +79,13 @@ Gigantamax fica separado das evoluções permanentes e das Megas. Os atributos s
 ### Atualização do ícone de instalação
 
 Os arquivos versionados `app-icon-pokeball-flat-192.png`, `app-icon-pokeball-flat-512.png` e `apple-touch-pokeball-flat.png` são usados no manifesto, ícone do Safari e convite de instalação. O sistema pode demorar para atualizar ícones de aplicativos já instalados; se mantiver o ícone antigo, remova o atalho/app e instale novamente pelo site. Remover o app pode apagar os dados locais dependendo do navegador.
+
+## Onde capturar (jogos principais)
+
+A ficha inclui seletor de jogo, locais, método de encontro/obtenção, intervalos de nível e condições alternativas registradas. O catálogo tem 41 versões principais (incluindo edições japonesas), com dados de encontros para 35 delas. DLCs de Sword/Shield são agrupados com o jogo correspondente. Colosseum, XD, Champions e Pokémon GO não fazem parte deste seletor.
+
+Na versão atual da base, Brilliant Diamond, Shining Pearl, Legends: Arceus, Scarlet, Violet e Legends: Z-A não têm registros nesta fonte. A interface deixa explícita a cobertura parcial e nunca trata ausência de dados como impossibilidade de captura. Mesmo os jogos com registros podem ter lacunas. Nomes de locais e algumas condições permanecem em inglês.
+
+Os dados de encounters.js são uma consolidação dos CSVs encounters, encounter_slots, encounter_methods, encounter_condition_value_map, location_areas e tabelas de nomes da PokéAPI. Não mostra probabilidades agregadas: intervalos de nível abrangem as condições alternativas apresentadas. Registros de presentes, ovos e trocas com NPC são identificados pelo método.
+
+Formas regionais usam o ID da forma selecionada. Megas/Gigantamax usam os próprios encontros quando disponíveis; caso contrário, os da forma de origem, com indicação na ficha. Todos esses dados são incluídos no cache offline do PWA.
