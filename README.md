@@ -89,3 +89,15 @@ Na versão atual da base, Brilliant Diamond, Shining Pearl, Legends: Arceus, Sca
 Os dados de encounters.js são uma consolidação dos CSVs encounters, encounter_slots, encounter_methods, encounter_condition_value_map, location_areas e tabelas de nomes da PokéAPI. Não mostra probabilidades agregadas: intervalos de nível abrangem as condições alternativas apresentadas. Registros de presentes, ovos e trocas com NPC são identificados pelo método.
 
 Formas regionais usam o ID da forma selecionada. Megas/Gigantamax usam os próprios encontros quando disponíveis; caso contrário, os da forma de origem, com indicação na ficha. Todos esses dados são incluídos no cache offline do PWA.
+
+## Jogos compatíveis
+
+A ficha mostra 12 jogos: Let's Go Pikachu/Eevee, Sword/Shield, Brilliant Diamond/Shining Pearl, Legends: Arceus, Scarlet/Violet, Legends: Z-A e FireRed/LeafGreen. Ícones coloridos com ✓ indicam suporte à forma selecionada; os demais ficam apagados. Toque ou use o teclado para consultar o nome completo e o status. A seleção shiny mantém a mesma compatibilidade da forma.
+
+Compatibilidade significa que a espécie/forma pode existir no jogo, incluindo trocas, eventos e DLCs. Não é uma indicação de captura local, exclusividade de versão, elegibilidade competitiva, disponibilidade de eventos hoje ou rota de transferência pelo HOME. Para Megas e Gigantamax, indica suporte à transformação em batalha. Os pares de versões compartilham o suporte de espécies/formas, mesmo quando os encontros são exclusivos. FireRed/LeafGreen suportam as 386 espécies da geração III, sem formas regionais ou transformações posteriores.
+
+`compatibility.js` contém apenas os fatos consolidados em máscaras por ID de Pokémon. Referência: tabelas pessoais gg, swsh, bdsp, la, sv e za do [PKHeX, revisão 8e3eb3d](https://github.com/kwsch/PKHeX/tree/8e3eb3d47bb496746c3eaa9d160329d295a5e2e5/PKHeX.Core/Resources/byte/personal). Formas regionais e Megas são identificadas pelos atributos/tipos e validadas pelas flags de presença; considera os ajustes de Ataque das Megas em Z-A. Totem Raticate e Pikachu com boné possuem regras próprias para evitar coincidências com atributos de outras formas. Nenhum código-fonte do PKHeX foi incorporado à aplicação.
+
+Os ícones locais em `game-icons/` são os ícones de jogos do Pokémon HOME, disponibilizados no [Bulbagarden Archives](https://archives.bulbagarden.net/wiki/Category:Pok%C3%A9mon_HOME_game_icons). As marcas e artes Pokémon pertencem aos respectivos titulares. Dados e ícones também são incluídos no cache offline.
+
+“Onde capturar” pode ser recolhido pelo cabeçalho e expandido novamente, sem perder o jogo escolhido. A preferência de recolhimento é mantida durante a sessão e ao mudar a forma ou a aparência shiny.
