@@ -1,6 +1,6 @@
 'use strict';
-const RELEASE="ef0ebe310adf";
-const SHELL_FILES=["style.css?v=af76bad6cafb","app.js?v=92c074a0b0af","data.js?v=34c7e6b8ba66","extras.js?v=02333b81c2e2","pwa.js?v=f857676cd436","manifest.webmanifest?v=8c3c291be3bd","app-icon-pokeball-192.png","app-icon-pokeball-512.png","apple-touch-pokeball.png"];
+const RELEASE="d302bdf7d9af";
+const SHELL_FILES=["style.css?v=af76bad6cafb","app.js?v=92c074a0b0af","data.js?v=34c7e6b8ba66","extras.js?v=02333b81c2e2","pwa.js?v=f857676cd436","manifest.webmanifest?v=63e945b97d3b","app-icon-pokeball-flat-192.png","app-icon-pokeball-flat-512.png","apple-touch-pokeball-flat.png","app-icon-pokeball-flat.svg"];
 const ROOT=self.registration.scope;
 const PREFIX='gamaave-pokedex-'+new URL(ROOT).pathname.replace(/\W/g,'_')+'-';
 const SHELL=PREFIX+'shell-'+RELEASE;

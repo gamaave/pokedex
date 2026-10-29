@@ -61,7 +61,7 @@ Uma nova versão é preparada separadamente. Quando estiver pronta, o aviso **At
 
 Depois de editar HTML, CSS, JavaScript, dados ou manifesto, execute `node scripts/build-pwa.cjs` antes de publicar. Isso atualiza as URLs de arquivos e a versão do service worker. Publique também o index.html e sw.js gerados. Para testar o modo offline, sirva por localhost ou HTTPS; a abertura direta como arquivo não permite service worker.
 
-Os ícones de instalação usam uma arte de Pokébola vermelha e branca sobre fundo escuro, em versões PNG de 192, 512 e 180 pixels. A instalação como PWA não altera os direitos sobre o conteúdo da franquia.
+Os ícones de instalação usam uma arte plana de Pokébola vermelha e branca sobre fundo cinza-escuro, com fonte vetorial SVG, em versões PNG de 192, 512 e 180 pixels. A instalação como PWA não altera os direitos sobre o conteúdo da franquia.
 
 ## Mega Evoluções
 
@@ -78,4 +78,4 @@ Gigantamax fica separado das evoluções permanentes e das Megas. Os atributos s
 
 ### Atualização do ícone de instalação
 
-Os arquivos versionados `app-icon-pokeball-192.png`, `app-icon-pokeball-512.png` e `apple-touch-pokeball.png` são usados no manifesto, ícone do Safari e convite de instalação. O sistema pode demorar para atualizar ícones de aplicativos já instalados; se mantiver o ícone antigo, remova o atalho/app e instale novamente pelo site. Remover o app pode apagar os dados locais dependendo do navegador.
+Os arquivos versionados `app-icon-pokeball-flat-192.png`, `app-icon-pokeball-flat-512.png` e `apple-touch-pokeball-flat.png` são usados no manifesto, ícone do Safari e convite de instalação. O sistema pode demorar para atualizar ícones de aplicativos já instalados; se mantiver o ícone antigo, remova o atalho/app e instale novamente pelo site. Remover o app pode apagar os dados locais dependendo do navegador.
