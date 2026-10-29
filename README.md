@@ -31,7 +31,7 @@ Abra index.html no navegador, ou use um servidor estático. Com Node instalado, 
 
 ## Dados e regras
 
-Base incluída em data.js, obtida dos CSVs públicos oficiais de https://github.com/PokeAPI/pokeapi em 29/10/2026. Contém todas as 1.025 espécies disponíveis nessa base, cada uma na forma padrão; formas regionais aparecem no seletor da ficha, enquanto outras formas alternativas e Mega Evoluções não são entradas separadas. As gerações seguem a espécie, incluindo Hisui na geração VIII.
+Base incluída em data.js, obtida dos CSVs públicos oficiais de https://github.com/PokeAPI/pokeapi em 29/10/2026. Contém todas as 1.025 espécies disponíveis nessa base, cada uma na forma padrão; formas regionais aparecem no seletor da ficha, enquanto Mega Evoluções também aparecem no seletor; outras formas alternativas não são entradas separadas. As gerações seguem a espécie, incluindo Hisui na geração VIII.
 
 Os multiplicadores defensivos usam a tabela atual dos 18 tipos dos jogos principais e multiplicam as relações dos dois tipos. Não simulam habilidades, itens, clima, efeitos de golpes ou Terastalização. O tipo Stellar não é um tipo padrão de espécie e não entra nesse cálculo.
 
@@ -62,3 +62,10 @@ Uma nova versão é preparada separadamente. Quando estiver pronta, o aviso **At
 Depois de editar HTML, CSS, JavaScript, dados ou manifesto, execute `node scripts/build-pwa.cjs` antes de publicar. Isso atualiza as URLs de arquivos e a versão do service worker. Publique também o index.html e sw.js gerados. Para testar o modo offline, sirva por localhost ou HTTPS; a abertura direta como arquivo não permite service worker.
 
 Os ícones de instalação usam um monograma G desenhado para o projeto, sem personagens Pokémon. A instalação como PWA não altera os direitos sobre o conteúdo da franquia.
+
+## Mega Evoluções
+
+A base inclui 97 formas marcadas com `is_mega` pela PokéAPI, distribuídas entre 87 espécies. Elas aparecem no seletor e em uma seção própria na ficha, com tipos, dimensões, atributos e multiplicadores defensivos da forma selecionada. O modo shiny usa as imagens da Mega correspondente e mantém o fallback para sprite ou aviso de indisponibilidade. Algumas formas recentes podem ainda não ter imagens na fonte.
+
+Megas são apresentadas como transformações temporárias, separadas das evoluções permanentes. A disponibilidade e ativação dependem do jogo. Reversão Primal e Gigantamax não são marcadas como Megas nesta implementação.
+
