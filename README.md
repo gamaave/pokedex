@@ -4,7 +4,7 @@ Pokédex responsiva em português com 1.025 espécies, 18 tipos, busca por nome/
 
 ## Lendários e evoluções
 
-A aba **Lendários** lista as 71 espécies com `is_legendary` na PokéAPI; míticos não são incluídos nessa classificação. Busca, filtros e ordenação também funcionam nessa aba.
+A aba **Míticos e lendários** lista 94 espécies: 71 lendários e 23 míticos, conforme os campos `is_legendary` e `is_mythical` da PokéAPI. Busca, filtros e ordenação também funcionam nessa aba.
 
 Cada ficha mostra a cadeia completa de evoluções da espécie, com estágios, ramificações, pré-evoluções e links para abrir as outras fichas. Espécies sem evolução recebem uma indicação explícita. Os dados são locais e incluem relações entre espécies, condições e variantes de método.
 
